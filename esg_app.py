@@ -148,8 +148,8 @@ with col1:
             items = csv_to_items(raw)
             st.session_state.inventory.extend(items)
             st.success(f'Imported {len(items)} items from CSV')
-            st.experimental_rerun()
-            #st.rerun()
+            #st.experimental_rerun()
+            st.rerun()
         except Exception as e:
             st.error('Failed to parse CSV: ' + str(e))
 
